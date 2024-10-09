@@ -1,5 +1,3 @@
-import dotenv from 'dotenv';
-dotenv.config();
 import express from 'express';
 import appsRoutes from './routes/index.js'
 import sequelize from './db/config.js';
@@ -18,7 +16,6 @@ app.use((req, res, next) => {
         messsage: 'Not Found'
     });
 });
-
 const PORT = process.env.PORT || 3000;
 
 const startServer = async () => {
